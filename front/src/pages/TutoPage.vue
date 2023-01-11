@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-xl">
+  <q-page class="q-pa-xl">
     <h2>Async hook</h2>
     {{result}}
     <div v-if="loading">Result are loading wait a bit</div>
@@ -41,7 +41,7 @@
       <option>B</option>
       <option>C</option>
     </select>
-  </div>
+  </q-page>
 </template>
 <script>
 // Syntax vue2 Option API

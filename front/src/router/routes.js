@@ -17,6 +17,22 @@ const routes = [
     ]
   },
   {
+    path: '/lists',
+    // component: () => import('layouts/ListLayout.vue'),
+    children: [
+      { path: ':id', component: () => import('src/pages/ListDetailPage.vue') },
+      { path: ':id/task/new', component: () => import('src/pages/NewTaskPage.vue') }
+    ]
+  },
+  {
+    path: '/task',
+    // component: () => import('layouts/ListLayout.vue'),
+    children: [
+      { path: ':id', component: () => import('src/pages/TaskDetailPage.vue') },
+      { path: 'edit/:id', component: () => import('src/pages/EditTaskPage.vue') }
+    ]
+  },
+  {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue')
   }
